@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: "Tania Rascia's Website",
-    author: { name: 'Tania Rascia' },
+    title: "Bhanu Pratap Reddy",
+    author: { name: 'Bhanu' },
     pathPrefix: '/',
-    siteUrl: 'https://www.taniarascia.com',
+    siteUrl: 'https://bhanu34.github.io/bhanureddy',
     description:
-      'Software engineer and open-source creator. This is my digital garden.',
-    feedUrl: 'https://www.taniarascia.com/rss.xml',
-    logo: 'https://www.taniarascia.com/logo.png',
+      'Modeling and Simulation Engineer. This is my digital garden.',
+    feedUrl: 'https://bhanu34.github.io/bhanureddy/rss.xml',
+    logo: 'https://bhanu34.github.io/bhanureddy/logo.png',
   },
   plugins: [
     // ===================================================================================
