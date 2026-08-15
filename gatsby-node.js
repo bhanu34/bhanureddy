@@ -171,3 +171,24 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.createPages = createPages
 exports.onCreateNode = createNode
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type MarkdownRemarkFrontmatter {
+      title: String
+      date: Date @dateformat
+      template: String
+      slug: String
+      tags: [String]
+      categories: [String]
+      htmlTitle: String
+      format: String
+      dated: Boolean
+      thumbnail: String
+    }
+    
+    type MarkdownRemark implements Node {
+      frontmatter: MarkdownRemarkFrontmatter
+      rawMarkdownBody: String
+    }
+  `)
+}
