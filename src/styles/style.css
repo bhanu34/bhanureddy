@@ -1,12 +1,13 @@
 /* ==========================================================================
-   Resume Page Styling (Matches Tania Rascia Layout)
+   Full-Width Stacked Resume Layout
    ========================================================================== */
 
-.resume-page {
-  max-width: 760px;
+.resume-container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-  display: block; /* Disables flex horizontal split */
+  padding-top: 1.5rem;
 }
 
 .resume-header {
@@ -14,33 +15,31 @@
 }
 
 .resume-name {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
   line-height: 1.1;
-  color: #1a202c;
 }
 
 .resume-tagline {
-  font-size: 1.35rem;
-  color: #4a5568;
-  margin: 0 0 1.25rem 0;
+  font-size: 1.25rem;
+  color: var(--color-text-muted, #718096);
+  margin: 0 0 1rem 0;
 }
 
-.resume-links {
-  font-size: 1rem;
-  color: #2d3748;
+.resume-contact {
+  font-size: 0.95rem;
 }
 
-.resume-links .divider {
+.resume-contact .divider {
   margin: 0 0.5rem;
-  color: #cbd5e0;
+  color: var(--color-border, #cbd5e0);
 }
 
 .resume-section {
+  display: block !important;
+  width: 100% !important;
   margin-bottom: 2.5rem;
-  display: block;
-  width: 100%;
 }
 
 .resume-section-title {
@@ -48,17 +47,17 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #718096;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 0.5rem;
-  margin: 0 0 1.5rem 0;
+  color: var(--color-text-muted, #718096);
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  padding-bottom: 0.4rem;
+  margin: 0 0 1.25rem 0;
 }
 
-.resume-job {
+.resume-item {
   margin-bottom: 1.75rem;
 }
 
-.resume-job-header {
+.resume-item-top {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -67,42 +66,31 @@
   margin-bottom: 0.25rem;
 }
 
-.company-name {
+.resume-company {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
 }
 
-.company-name a {
-  color: #2b6cb0;
-  text-decoration: underline;
-}
-
-.job-date {
-  font-family: inherit;
+.resume-date {
   font-size: 0.95rem;
-  color: #718096;
+  color: var(--color-text-muted, #718096);
+  font-family: inherit;
 }
 
-.job-title {
-  font-size: 1.1rem;
+.resume-role {
+  font-size: 1.05rem;
   font-weight: 700;
-  color: #2d3748;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
-.resume-list {
+.resume-bullets {
   padding-left: 1.25rem;
   margin: 0.5rem 0 0 0;
   list-style-type: disc;
 }
 
-.resume-list li {
-  margin-bottom: 0.6rem;
+.resume-bullets li {
+  margin-bottom: 0.5rem;
   line-height: 1.6;
-  color: #2d3748;
-}
-
-.resume-list li strong {
-  color: #1a202c;
 }
