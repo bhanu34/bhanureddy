@@ -160,6 +160,9 @@ const createNode = ({ node, actions, getNode }) => {
 // Explicitly declare all optional frontmatter fields so GraphQL queries never crash
 exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
+    type MarkdownRemark implements Node {
+      frontmatter: MarkdownRemarkFrontmatter
+    }
     type MarkdownRemarkFrontmatter {
       title: String
       date: Date @dateformat
@@ -172,6 +175,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       htmlTitle: String
       format: String
       dated: Boolean
+      comments_off: Boolean
+      highlight: Boolean
+      updated: Date @dateformat
     }
   `)
 }
