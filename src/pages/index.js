@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 import { Link, graphql } from 'gatsby'
-
 import Helmet from 'react-helmet'
 
 import { Layout } from '../components/Layout'
@@ -12,14 +11,12 @@ import { PageLayout } from '../components/PageLayout'
 import { projectsList } from '../data/projectsList'
 import { shelvesList } from '../data/shelvesList'
 import { getSimplifiedPosts } from '../utils/helpers'
-// import { useContentImages } from '../utils/hooks/useContentImages'
 import config from '../utils/config'
 import github from '../assets/nav-github.png'
 
 export default function Index({ data }) {
   const latestPosts = data.latestPosts.edges
   const postCount = data.postCount.totalCount
-  // const imagesByPath = useContentImages()
   const recent = useMemo(() => getSimplifiedPosts(latestPosts), [latestPosts])
   const shelfPostsBySlug = useMemo(() => {
     const map = {}
@@ -42,75 +39,43 @@ export default function Index({ data }) {
             <div>
               <h1 className="flex-align-center gap">Hey, I'm Bhanu!</h1>
               <p className="hero-description hero-tagline">
-                Principal software engineer, writer, all-around nerd.
+                Computational Physicist, web tinkerer, all-around nerd.
               </p>
               <Heading title="A brief timeline" small />
               <ul className="hero-eras">
                 <li>
-                  <span className="era-dates">1998&ndash;2006</span>
+                  <span className="era-dates">1995&ndash;2009</span>
                   <span>
-                    Geocities kid, forum-goer, gamer, lover of obscure '80s
-                    bands.
+                    Army brat, APS kid, sports obsessive, country hopper, culture nerd.
                   </span>
                 </li>
                 <li>
-                  <span className="era-dates">2007&ndash;2014</span>
+                  <span className="era-dates">2009&ndash;2017</span>
                   <span>
-                    <Link to="/from-cooking-to-coding">Professional chef</Link>:
-                    Culinary degree, 60-hour weeks in Chicago kitchens, line
-                    cook to chef-manager by 22.
+                    South India, new surroundings, a growing love for mathematics, and an obsession with engineering. Eventually earned a B.Tech.
                   </span>
                 </li>
                 <li>
-                  <span className="era-dates">2014&ndash;2020</span>
+                  <span className="era-dates">2017&ndash;2021</span>
                   <span>
-                    <Link to="/how-i-made-a-career-change-into-web-development">
-                      Career change
-                    </Link>
-                    : Unpaid intern by day, cook by night, then junior dev to
-                    senior engineer.{' '}
-                    <Link to="/everything-i-know-as-a-software-developer-without-a-degree">
-                      Wrote everything down
-                    </Link>{' '}
-                    along the way.
+                    Started as a Simulation Engineer, worked across different companies and projects, and found my niche in modeling, simulation, and solving tricky engineering problems.
                   </span>
                 </li>
                 <li>
                   <span className="era-dates">2021&ndash;now</span>
                   <span>
-                    <Link to="/resume">Principal software engineer</Link>:
-                    Building design systems, setting technical direction,
-                    shipping features, and still documenting:{' '}
-                    <Link to="/blog">{postCount} posts</Link>,{' '}
-                    <Link to="/me#publications">40+ publications</Link>, and{' '}
-                    <a
-                      href="https://github.com/taniarascia"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      20,000+ stars on GitHub
-                    </a>
-                    .
+                    Joined Stryker and moved into medical device R&D, applying simulation and engineering to problems where the work ultimately helps improve patient care.
                   </span>
                 </li>
               </ul>
               <p className="hero-description">
-                <Link to="/me">Also</Link>: city explorer, weight-lifter,
-                brick-clicker, accordion enthusiast, biker, Magic gatherer,
-                webmaster.
+                <strong>Also</strong>: Army brat, sports kid, country hopper, simulation nerd, web tinkerer.
               </p>
-            </div>
-            <div className="hero-image-container">
-              <img src="/ram.png" className="hero-image" alt="RAM Ram" />
-              <aside className="hero-bubble">
-                Can't remember how to spell my name? Just go to{' '}
-                <a href="https://tania.dev">tania.dev</a>!
-              </aside>
             </div>
           </div>
         </Hero>
 
-        {shelvesList.map((shelf) => (
+        {shelvesList && shelvesList.length > 0 && shelvesList.map((shelf) => (
           <section className="section-index" key={shelf.title}>
             <Heading
               title={shelf.title}
@@ -160,7 +125,7 @@ export default function Index({ data }) {
             title="Projects"
             slug="/projects"
             buttonText="All Projects"
-            description="Open-source projects I've worked on over the years."
+            description="Projects and open-source software I've worked on."
             icon={github}
           />
 
@@ -169,19 +134,11 @@ export default function Index({ data }) {
               .filter((project) => project.highlight)
               .map((project) => {
                 return (
-                  <div className="card" key={`hightlight-${project.slug}`}>
+                  <div className="card" key={`highlight-${project.slug}`}>
                     <time>{project.date}</time>
                     <div className="card-title">
-                      {/* {project.image && imagesByPath[project.image] && (
-                        <img
-                          src={imagesByPath[project.image]}
-                          alt=""
-                          width="32"
-                          height="32"
-                        />
-                      )} */}
                       <a
-                        href={`https://github.com/taniarascia/${project.slug}`}
+                        href={project.url || `https://github.com/bhanu34/${project.slug}`}
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -210,7 +167,7 @@ export default function Index({ data }) {
                       )}
                       <a
                         className="button secondary small"
-                        href={`https://github.com/taniarascia/${project.slug}`}
+                        href={`https://github.com/bhanu34/${project.slug}`}
                         target="_blank"
                         rel="noreferrer"
                       >
