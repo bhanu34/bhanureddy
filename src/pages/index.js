@@ -79,11 +79,13 @@ export default function Index({ data }) {
                 src={mascot}
                 className="hero-image"
                 alt="Thermal Owl Mascot"
-                width="160"
-                height="160"
+                width="210"
+                height="210"
+                style={{ transform: 'translateY(10px)' }}
               />
               <aside className="hero-bubble">
-                Computational modeling &amp; simulation!
+                Curious about my career journey?{' '}
+                <Link to="/resume">Explore my experience &rarr;</Link>
               </aside>
             </div>
           </div>
