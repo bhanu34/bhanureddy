@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Engineering Mesh Grid Pattern -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1b3b42" stroke-width="0.85" stroke-opacity="0.55" />
+    </pattern>
+
+    <!-- Clip Paths for Body and Head to bound the heatmap layers -->
+    <clipPath id="body-clip">
+      <ellipse cx="250" cy="305" rx="145" ry="155" />
+    </clipPath>
+
+    <clipPath id="head-clip">
+      <circle cx="250" cy="180" r="135" />
+    </clipPath>
+
+    <clipPath id="left-wing-clip">
+      <path d="M 125,230 C 90,230 65,280 65,340 C 65,390 95,410 135,395 C 115,350 110,290 125,230 Z" />
+    </clipPath>
+
+    <clipPath id="right-wing-clip">
+      <path d="M 375,230 C 410,230 435,280 435,340 C 435,390 405,410 365,395 C 385,350 390,290 375,230 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- ================= GROUND SHADOW ================= -->
+  <ellipse cx="250" cy="465" rx="140" ry="14" fill="#e8edf2" />
+
+  <!-- ================= FEET ================= -->
+  <g stroke="#26384a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Left Foot -->
+    <path d="M 190,425 L 190,460 M 172,468 L 190,460 L 208,468" />
+    <!-- Right Foot -->
+    <path d="M 310,425 L 310,460 M 292,468 L 310,460 L 328,468" />
+  </g>
+
+  <!-- ================= WINGS ================= -->
+  <!-- Left Wing (Symmetrical, Resting) -->
+  <g clip-path="url(#left-wing-clip)">
+    <path d="M 125,230 C 90,230 65,280 65,340 C 65,390 95,410 135,395 C 115,350 110,290 125,230 Z" fill="#247ba0" stroke="#162e3b" stroke-width="4" />
+    <path d="M 50,285 L 150,285 L 150,420 L 50,420 Z" fill="#2a9d8f" />
+    <path d="M 50,345 L 150,345 L 150,420 L 50,420 Z" fill="#70c1b3" />
+    <path d="M 50,380 L 150,380 L 150,420 L 50,420 Z" fill="#8ab17d" />
+    <rect x="50" y="200" width="100" height="230" fill="url(#grid)" />
+  </g>
+  <path d="M 125,230 C 90,230 65,280 65,340 C 65,390 95,410 135,395 C 115,350 110,290 125,230 Z" fill="none" stroke="#162e3b" stroke-width="4" />
+
+  <!-- Right Wing (Symmetrical, Resting) -->
+  <g clip-path="url(#right-wing-clip)">
+    <path d="M 375,230 C 410,230 435,280 435,340 C 435,390 405,410 365,395 C 385,350 390,290 375,230 Z" fill="#247ba0" stroke="#162e3b" stroke-width="4" />
+    <path d="M 350,285 L 450,285 L 450,420 L 350,420 Z" fill="#2a9d8f" />
+    <path d="M 350,345 L 450,345 L 450,420 L 350,420 Z" fill="#70c1b3" />
+    <path d="M 350,380 L 450,380 L 450,420 L 350,420 Z" fill="#8ab17d" />
+    <rect x="350" y="200" width="100" height="230" fill="url(#grid)" />
+  </g>
+  <path d="M 375,230 C 410,230 435,280 435,340 C 435,390 405,410 365,395 C 385,350 390,290 375,230 Z" fill="none" stroke="#162e3b" stroke-width="4" />
+
+  <!-- ================= EAR TUFTS ================= -->
+  <polygon points="175,95 130,55 145,120" fill="#1d698c" stroke="#162e3b" stroke-width="4" stroke-linejoin="round" />
+  <polygon points="325,95 370,55 355,120" fill="#1d698c" stroke="#162e3b" stroke-width="4" stroke-linejoin="round" />
+
+  <!-- ================= LOWER BODY HEATMAP ================= -->
+  <g clip-path="url(#body-clip)">
+    <!-- Base Cool Blue -->
+    <ellipse cx="250" cy="305" rx="145" ry="155" fill="#1d698c" />
+
+    <!-- Concentric Thermal Stress Contours -->
+    <ellipse cx="250" cy="315" rx="125" ry="135" fill="#2a9d8f" />
+    <ellipse cx="250" cy="315" rx="105" ry="115" fill="#52b788" />
+    <ellipse cx="250" cy="315" rx="85" ry="95" fill="#74c69d" />
+    <ellipse cx="250" cy="315" rx="68" ry="76" fill="#e9c46a" />
+    <ellipse cx="250" cy="315" rx="50" ry="56" fill="#f4a261" />
+    <ellipse cx="250" cy="315" rx="34" ry="38" fill="#e76f51" />
+    <ellipse cx="250" cy="315" rx="20" ry="24" fill="#d64045" />
+
+    <!-- Diagonal FEA Coordinate Crosshairs -->
+    <line x1="150" y1="215" x2="350" y2="415" stroke="#162e3b" stroke-width="1.2" stroke-opacity="0.35" />
+    <line x1="350" y1="215" x2="150" y2="415" stroke="#162e3b" stroke-width="1.2" stroke-opacity="0.35" />
+
+    <!-- Grid Overlay -->
+    <rect x="90" y="140" width="320" height="330" fill="url(#grid)" />
+  </g>
+  <!-- Body Outer Outline -->
+  <ellipse cx="250" cy="305" rx="145" ry="155" fill="none" stroke="#162e3b" stroke-width="4" />
+
+  <!-- ================= HEAD HEATMAP ================= -->
+  <g clip-path="url(#head-clip)">
+    <!-- Base Cool Teal -->
+    <circle cx="250" cy="180" r="135" fill="#226f8a" />
+
+    <!-- Concentric Cranial Thermal Contours -->
+    <circle cx="250" cy="180" r="118" fill="#2a9d8f" />
+    <circle cx="250" cy="175" r="100" fill="#52b788" />
+    <circle cx="250" cy="170" r="82" fill="#74c69d" />
+    <circle cx="250" cy="165" r="64" fill="#e9c46a" />
+    <circle cx="250" cy="160" r="46" fill="#f4a261" />
+    <circle cx="250" cy="155" r="30" fill="#e76f51" />
+    <circle cx="250" cy="150" r="16" fill="#d64045" />
+
+    <!-- Head Grid Overlay -->
+    <rect x="100" y="35" width="300" height="300" fill="url(#grid)" />
+  </g>
+  <!-- Head Outer Outline -->
+  <circle cx="250" cy="180" r="135" fill="none" stroke="#162e3b" stroke-width="4" />
+
+  <!-- ================= FACIAL FEATURES ================= -->
+
+  <!-- Glasses Frame Temples (Side Bars) -->
+  <path d="M 130,175 Q 165,180 190,190" fill="none" stroke="#162e3b" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M 370,175 Q 335,180 310,190" fill="none" stroke="#162e3b" stroke-width="4.5" stroke-linecap="round" />
+
+  <!-- Bridge of Glasses -->
+  <path d="M 235,188 Q 250,178 265,188" fill="none" stroke="#162e3b" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Eyebrows (Curved Analytical Arcs) -->
+  <path d="M 160,118 Q 205,108 240,132" fill="none" stroke="#162e3b" stroke-width="6.5" stroke-linecap="round" />
+  <path d="M 340,118 Q 295,108 260,132" fill="none" stroke="#162e3b" stroke-width="6.5" stroke-linecap="round" />
+
+  <!-- Left Eye Glass & Pupil -->
+  <circle cx="198" cy="190" r="48" fill="#ffffff" stroke="#162e3b" stroke-width="5.5" />
+  <circle cx="206" cy="190" r="24" fill="#22313f" />
+  <circle cx="214" cy="182" r="7" fill="#ffffff" />
+
+  <!-- Right Eye Glass & Pupil -->
+  <circle cx="302" cy="190" r="48" fill="#ffffff" stroke="#162e3b" stroke-width="5.5" />
+  <circle cx="294" cy="190" r="24" fill="#22313f" />
+  <circle cx="302" cy="182" r="7" fill="#ffffff" />
+
+  <!-- Beak -->
+  <polygon points="250,225 233,185 267,185" fill="#f4a261" stroke="#162e3b" stroke-width="4" stroke-linejoin="round" />
+  <polygon points="250,225 240,185 260,185" fill="#e76f51" />
+
+</svg>
