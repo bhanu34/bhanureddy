@@ -1,10 +1,10 @@
 const config = {
-  siteTitle: "Tania Rascia's Website",
-  siteAuthor: 'Tania Rascia',
-  siteUrl: 'https://www.taniarascia.com',
+  siteTitle: "Bhanu's Website",
+  siteAuthor: 'Bhanu Pratap Reddy',
+  siteUrl: 'https://bhanu34.github.io/bhanureddy',
   siteLogo: '/logo.png',
   description:
-    'Software engineer and open source creator. This is my digital garden.',
+    'Modeling and Simulation Engineer. This is my digital garden.',
 }
 
 export default config
