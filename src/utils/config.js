@@ -1,5 +1,5 @@
 const config = {
-  siteTitle: "Bhanu's Website",
+  siteTitle: "Bhanu\'s Website",
   siteAuthor: 'Bhanu Pratap Reddy',
   siteUrl: 'https://bhanu34.github.io/bhanureddy',
   siteLogo: '/logo.png',
