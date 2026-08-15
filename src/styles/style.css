@@ -2408,3 +2408,40 @@ a.footer-link {
 .gatsby-resp-image-wrapper {
   margin: 2rem 0;
 }
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.experience-header .dates {
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #718096);
+  font-family: monospace;
+}
+
+.role-title {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.bullet-list {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
