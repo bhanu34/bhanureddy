@@ -159,27 +159,15 @@ const createNode = ({ node, actions, getNode }) => {
 
 // Declare optional frontmatter fields so queries stay valid even when no
 // content file currently sets them
-
-exports.createPages = createPages
-exports.onCreateNode = createNode
 exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
     type MarkdownRemarkFrontmatter {
-      title: String
-      date: Date @dateformat
-      template: String
-      slug: String
-      tags: [String]
-      categories: [String]
       htmlTitle: String
       format: String
       dated: Boolean
-      thumbnail: String
-    }
-    
-    type MarkdownRemark implements Node {
-      frontmatter: MarkdownRemarkFrontmatter
-      rawMarkdownBody: String
     }
   `)
 }
+
+exports.createPages = createPages
+exports.onCreateNode = createNode
