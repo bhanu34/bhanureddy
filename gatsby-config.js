@@ -1,8 +1,11 @@
 module.exports = {
+  pathPrefix: '/bhanureddy',
   siteMetadata: {
-    title: "Bhanu Pratap Reddy",
-    author: { name: 'Bhanu' },
-    pathPrefix: '/',
+    title: 'Bhanu Pratap Reddy',
+    author: { 
+      name: 'Bhanu Pratap Reddy' 
+    },
+    pathPrefix: '/bhanureddy',
     siteUrl: 'https://bhanu34.github.io/bhanureddy',
     description:
       'Modeling and Simulation Engineer. This is my digital garden.',
@@ -24,13 +27,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-      name: 'Bhanu Pratap Reddy',
-      short_name: 'Bhanu',
-      start_url: '/',
-      background_color: '#ffffff',
-      theme_color: '#226f8a',
-      display: 'minimal-ui',
-      icon: 'src/assets/mascot.svg', // or static/favicon.svg
+        name: 'Bhanu Pratap Reddy',
+        short_name: 'Bhanu',
+        start_url: '/bhanureddy/',
+        background_color: '#ffffff',
+        theme_color: '#226f8a',
+        display: 'minimal-ui',
+        icon: 'src/assets/mascot.svg',
       },
     },
     {
@@ -59,37 +62,37 @@ module.exports = {
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [
                     { 'content:encoded': edge.node.html },
-                    { author: 'hello@taniarascia.com' },
+                    { author: 'Bhanu Pratap Reddy' },
                   ],
                 })
               })
             },
             query: `
               {
-              allMarkdownRemark(
-                limit: 30
-                sort: {frontmatter: {date: DESC}}
-                filter: {frontmatter: {template: {eq: "post"}}}
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
-                      template
+                allMarkdownRemark(
+                  limit: 30
+                  sort: {frontmatter: {date: DESC}}
+                  filter: {frontmatter: {template: {eq: "post"}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        template
+                      }
                     }
                   }
                 }
               }
-            }
             `,
             output: '/rss.xml',
-            title: 'Tania Rascia | RSS Feed',
+            title: 'Bhanu Pratap Reddy | RSS Feed',
           },
         ],
       },
@@ -104,7 +107,6 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          // placeholder: `dominantColor`,
           backgroundColor: `transparent`,
         },
       },
@@ -142,7 +144,6 @@ module.exports = {
             },
           },
           'gatsby-remark-autolink-headers',
-          // 'gatsby-remark-prismjs-copy-button',
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
