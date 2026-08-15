@@ -13,6 +13,7 @@ import { shelvesList } from '../data/shelvesList'
 import { getSimplifiedPosts } from '../utils/helpers'
 import config from '../utils/config'
 import github from '../assets/nav-github.png'
+import mascot from '../assets/mascot.svg'
 
 export default function Index({ data }) {
   const latestPosts = data.latestPosts.edges
@@ -71,6 +72,19 @@ export default function Index({ data }) {
               <p className="hero-description">
                 <strong>Also</strong>: Army brat, sports kid, country hopper, simulation nerd, web tinkerer.
               </p>
+            </div>
+
+            <div className="hero-image-container">
+              <img
+                src={mascot}
+                className="hero-image"
+                alt="Thermal Owl Mascot"
+                width="160"
+                height="160"
+              />
+              <aside className="hero-bubble">
+                Computational modeling &amp; simulation!
+              </aside>
             </div>
           </div>
         </Hero>
