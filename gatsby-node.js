@@ -157,11 +157,18 @@ const createNode = ({ node, actions, getNode }) => {
   }
 }
 
-// Declare optional frontmatter fields so queries stay valid even when no
-// content file currently sets them
+// Explicitly declare all optional frontmatter fields so GraphQL queries never crash
 exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
     type MarkdownRemarkFrontmatter {
+      title: String
+      date: Date @dateformat
+      slug: String
+      template: String
+      description: String
+      tags: [String]
+      categories: [String]
+      thumbnail: File @fileByRelativePath
       htmlTitle: String
       format: String
       dated: Boolean
