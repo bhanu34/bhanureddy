@@ -24,15 +24,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Tania Rascia's Website",
-        short_name: 'taniarascia.com',
-        description:
-          'Software engineer and open source creator. This is my digital garden.',
-        start_url: '/',
-        background_color: 'white',
-        // theme_color: '#959af8',
-        display: 'minimal-ui',
-        icon: `static/logo.png`,
+      name: 'Bhanu Pratap Reddy',
+      short_name: 'Bhanu',
+      start_url: '/',
+      background_color: '#ffffff',
+      theme_color: '#226f8a',
+      display: 'minimal-ui',
+      icon: 'src/assets/mascot.svg', // or static/favicon.svg
       },
     },
     {
