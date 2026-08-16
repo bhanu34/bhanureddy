@@ -1,13 +1,12 @@
 import React from 'react'
 
-import netlify from '../assets/netlify.png'
 import gatsby from '../assets/gatsby.png'
 import github from '../assets/nav-github.png'
+import { Netlify } from '../assets/Netlify'
 import { Mail } from '../assets/Mail'
 import { Rss } from '../assets/Rss'
 import { LinkedIn } from '../assets/LinkedIn'
 import { GitHub } from '../assets/GitHub'
-import { Heart } from '../assets/Heart'
 
 const links = [
   { url: 'mailto:bhanu93@live.com', label: 'Contact', Icon: Mail },
@@ -17,9 +16,9 @@ const links = [
 ]
 
 const madeWithLinks = [
-  { url: 'https://www.gatsbyjs.com', label: 'Gatsby', icon: gatsby },
-  { url: 'https://github.com/bhanu34', label: 'GitHub', icon: github },
-  { url: 'https://www.netlify.com', label: 'Netlify', icon: netlify },
+  { url: 'https://www.gatsbyjs.com', label: 'Gatsby', image: gatsby },
+  { url: 'https://github.com/bhanu34', label: 'GitHub', image: github },
+  { url: 'https://www.netlify.com', label: 'Netlify', Component: Netlify },
 ]
 
 export const Footer = () => {
@@ -40,6 +39,7 @@ export const Footer = () => {
             </a>
           ))}
         </nav>
+
         <nav className="footer-menu-buttons">
           {madeWithLinks.map((link) => (
             <a
@@ -50,13 +50,18 @@ export const Footer = () => {
               key={link.url}
               className="button small"
             >
-              <img src={link.icon} alt={link.label} width="16" height="16" />
+              {link.Component ? (
+                <link.Component size={16} />
+              ) : (
+                <img src={link.image} alt={link.label} width="16" height="16" />
+              )}
               <span>{link.label}</span>
             </a>
           ))}
         </nav>
+
         <div className="footer-made-by">
-          Desinged &amp; Developed by Bhanu
+          Designed &amp; Developed by Bhanu ⚛️
         </div>
       </section>
     </footer>
