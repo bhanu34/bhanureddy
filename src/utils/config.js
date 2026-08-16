@@ -1,10 +1,11 @@
 const config = {
-  siteTitle: "Bhanu\'s Website",
-  siteAuthor: 'Bhanu Pratap Reddy',
-  siteUrl: 'https://bhanu34.github.io/bhanureddy',
+  siteTitle: 'Bhanu Pratap Reddy',
+  siteTitleShort: 'Bhanu',
+  siteTitleAlt: 'Bhanu Pratap Reddy',
   siteLogo: '/logo.png',
-  description:
-    'Modeling and Simulation Engineer. This is my digital garden.',
+  siteUrl: 'https://bhanu.dev', // Ensure this isn't pointing to taniarascia.com
+  pathPrefix: '',
+  siteDescription: 'Computational Physicist & Simulation Engineer',
 }
 
 export default config
