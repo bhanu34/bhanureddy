@@ -46,22 +46,24 @@ export default function Index({ data }) {
 
               <div className="hero-experience">
                 <h3 className="company-heading">
-                  <a href="https://balto.ai" target="_blank" rel="noreferrer">
-                    Balto AI
+                  <a href="https://www.stryker.com/in/en/index.html" target="_blank" rel="noreferrer">
+                    Stryker
                   </a>
                 </h3>
 
                 <div className="role-row">
-                  <span className="role-title">Principal Software Engineer</span>
-                  <span className="role-date">April 2021 &ndash; Present</span>
+                  <span className="role-title">Staff CAE Engineer</span>
+                  <span className="role-date">August 2021 &ndash; Present</span>
                 </div>
 
                 <ul className="experience-bullets">
                   <li>
-                    <strong>Feature ownership:</strong> Own Balto's entire front end surface across the two core products: the agent-facing real-time guidance experience in the Electron desktop app, and the manager-facing cloud application where teams search, review, and coach on calls. Deliver major features end-to-end from API contracts to release, including the call exploration suite, coaching and performance-analytics, real-time notification systems, and AI-powered authoring workflows backed by LLM endpoints.
+                    <strong>Instruments Division:</strong> Responsible for delivering modeling and simulation-driven insights for MedSurg (Medical & Surgical) devices and equipment to reduce development costs, accelerate time-to-market, and drive innovation, with expertise in thermal management and reliability physics-based life prediction of medical electronic hardware early in the design process.
+.
                   </li>
                   <li>
-                    <strong>Design system:</strong> Created the front end design system and component library and drove its adoption across every product surface, with consolidated theming, cross-app visual parity, and white-label branding support.
+                    <strong>Trauma &amp; Extremities:</strong> Collaborated with Orthopedics R&D teams to develop advanced nonlinear micromotion models for quantifying implant loosening and performed material characterization of complex materials such as UHMWPE. Developed and validated FEA methodologies using Digital Image Correlation (DIC) for implant micromotion in accordance with ASTM F2028, and supported in-silico clinical studies for bone remodeling prediction using statistical population data. Contributed to simulation-driven development and performance assessment of complex humeral reconstruction implants, robotic shoulder surgical platforms, patient-specific implants, and trauma fixation systems including nails and plates, enabling robust design decisions, improved product performance, and enhanced clinical outcomes.
+.
                   </li>
                 </ul>
               </div>
