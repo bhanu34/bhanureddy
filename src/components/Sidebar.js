@@ -4,8 +4,6 @@ import { Link } from 'gatsby'
 import { ColorDropdown } from './ColorDropdown'
 import mascot from '../assets/mascot.svg'
 import floppyLogo from '../assets/nav-floppy.png'
-import floppy from '../assets/floppylogo.png'
-import blog from '../assets/nav-blog.png'
 import projects from '../assets/nav-projects.png'
 import { Moon } from '../assets/Moon'
 import { Sun } from '../assets/Sun'
@@ -21,10 +19,11 @@ export const Sidebar = ({
   setCurrentColor,
 }) => {
   const links = [
-    { url: '/#education', label: 'Education', iconText: '🎓' },
-    { url: '/#skills', label: 'Skills', iconText: '⚡' },
-    { url: '/#projects', label: 'Projects', image: projects }
+    { targetId: 'education', label: 'Education', iconText: '🎓' },
+    { targetId: 'skills', label: 'Skills', iconText: '⚡' },
+    { targetId: 'projects', label: 'Projects', image: projects },
   ]
+
   const socialLinks = [
     {
       url: 'mailto:bhanu93@live.com',
@@ -36,8 +35,20 @@ export const Sidebar = ({
     { url: '/rss.xml', label: 'RSS feed', Icon: Rss },
   ]
 
+  const handleScroll = (e, id) => {
+    if (typeof window !== 'undefined') {
+      const element = document.getElementById(id)
+      if (element) {
+        e.preventDefault()
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        window.history.pushState(null, '', `#${id}`)
+      }
+    }
+  }
+
   return (
     <aside className="sidebar">
+      {/* Title / Theme Bar */}
       <section className="sidebar-section">
         <div className="sidebar-title-link">
           <Link to="/" className="flex-align-center gap">
@@ -45,7 +56,7 @@ export const Sidebar = ({
               <img
                 src={floppyLogo}
                 className="navbar-logo"
-                alt="tania.dev"
+                alt="bhanu.dev"
                 title="💾"
                 height="16"
                 width="16"
@@ -63,7 +74,6 @@ export const Sidebar = ({
                 className="navbar-button"
                 onClick={() => {
                   const newTheme = theme === 'dark' ? 'light' : 'dark'
-
                   handleUpdateTheme(newTheme)
                 }}
               >
@@ -75,32 +85,49 @@ export const Sidebar = ({
         </div>
       </section>
 
-      <section className="sidebar-section">
-        <h2>About Me</h2>
-        <div className="sidebar-content">
-          <p>
-            I am Bhanu, computational physicist and engineering simulation 
-            nerd. This is my digital garden. 🌱
-          </p>
-        </div>
-      </section>
-
+      {/* Navigation Links */}
       <section className="sidebar-section">
         <nav className="sidebar-nav-links">
           {links.map((link) => (
-            <Link key={link.url} to={link.url} activeClassName="active">
-              <img src={link.image} alt={link.label} />
+            <a
+              key={link.label}
+              href={`#${link.targetId}`}
+              onClick={(e) => handleScroll(e, link.targetId)}
+              className="flex-align-center gap"
+            >
+              {link.image ? (
+                <img
+                  src={link.image}
+                  alt=""
+                  width="18"
+                  height="18"
+                  style={{ display: 'inline-block' }}
+                />
+              ) : (
+                <span
+                  style={{
+                    fontSize: '1.1rem',
+                    width: '18px',
+                    display: 'inline-flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  {link.iconText}
+                </span>
+              )}
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
       </section>
 
+      {/* Social Links */}
       <section className="sidebar-section">
         <h2>Stay Connected</h2>
         <nav className="sidebar-links">
           {socialLinks.map(({ url, label, Icon }) => (
-            <div className="tooltip-container" key={url}>
+            <div className="tooltip-container" key={label}>
               {url.startsWith('http') ? (
                 <a
                   href={url}
