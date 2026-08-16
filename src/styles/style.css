@@ -2512,3 +2512,12 @@ a.footer-link {
 .experience-bullets li strong {
   font-weight: 700;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+#education,
+#skills,
+#projects {
+  scroll-margin-top: 2rem;
+}
