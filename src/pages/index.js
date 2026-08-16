@@ -1,34 +1,18 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import { Layout } from '../components/Layout'
-import { Posts } from '../components/Posts'
 import { SEO } from '../components/SEO'
 import { Heading } from '../components/Heading'
 import { Hero } from '../components/Hero'
 import { PageLayout } from '../components/PageLayout'
 import { projectsList } from '../data/projectsList'
-import { shelvesList } from '../data/shelvesList'
-import { getSimplifiedPosts } from '../utils/helpers'
 import config from '../utils/config'
 import github from '../assets/nav-github.png'
 import mascot from '../assets/mascot.svg'
 
-export default function Index({ data }) {
-  const latestPosts = data.latestPosts.edges
-  const postCount = data.postCount.totalCount
-  const recent = useMemo(() => getSimplifiedPosts(latestPosts), [latestPosts])
-  const shelfPostsBySlug = useMemo(() => {
-    const map = {}
-
-    data.shelfPosts.nodes.forEach(({ frontmatter }) => {
-      map[frontmatter.slug] = frontmatter
-    })
-
-    return map
-  }, [data.shelfPosts])
-
+export default function Index() {
   return (
     <>
       <Helmet title={config.siteTitle} />
@@ -148,7 +132,7 @@ export default function Index({ data }) {
                   <strong>Thermal Management:</strong> Battery Thermal Management, Electronics Thermal Management, Thermal Digital Twins, Thermal Control Strategies, Thermal Optimization.
                 </li>
                 <li>
-                  <strong>Cooling Technologies:</strong> Liquid Cooling, Single- &amp; Two-Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
+                  <strong>Cooling Technologies:</strong> Liquid Cooling, Single &amp; Two Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
                 </li>
                 <li>
                   <strong>Electronics &amp; Data Center Cooling:</strong> High-Power Electronics Cooling, Data Center Thermal Management, Server &amp; Rack-Level Cooling, Airflow Management, Thermal Hotspot Mitigation, Thermal Architecture.
@@ -188,51 +172,7 @@ export default function Index({ data }) {
           </div>
         </Hero>
 
-        {shelvesList && shelvesList.length > 0 && shelvesList.map((shelf) => (
-          <section className="section-index" key={shelf.title}>
-            <Heading
-              title={shelf.title}
-              description={shelf.description}
-              slug={shelf.slug}
-              buttonText={shelf.buttonText}
-            />
-            <div className="posts shelf">
-              {shelf.links.map((link) => {
-                if (link.url) {
-                  return (
-                    <a
-                      className="post"
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      key={link.title}
-                    >
-                      <div>{link.title}</div>
-                    </a>
-                  )
-                }
-
-                const post = shelfPostsBySlug[link.slug.replace(/^\//, '')]
-                const icon = post?.thumbnail?.publicURL
-
-                return (
-                  <Link className="post" to={link.slug} key={link.slug}>
-                    <div>
-                      {icon && <img src={icon} alt="" width="25" height="25" />}
-                      {link.title ?? post?.title}
-                    </div>
-                  </Link>
-                )
-              })}
-            </div>
-          </section>
-        ))}
-
-        <section className="section-index">
-          <Heading title="Latest" slug="/blog" buttonText="All Posts" />
-          <Posts data={recent} />
-        </section>
-
+        {/* Projects Section */}
         <section>
           <Heading
             title="Projects"
@@ -298,46 +238,3 @@ export default function Index({ data }) {
 }
 
 Index.Layout = Layout
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    latestPosts: allMarkdownRemark(
-      limit: 4
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { eq: "post" } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            tags
-            categories
-          }
-        }
-      }
-    }
-    postCount: allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "post" } } }
-    ) {
-      totalCount
-    }
-    shelfPosts: allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "post" } } }
-    ) {
-      nodes {
-        frontmatter {
-          slug
-          title
-          thumbnail {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-`
