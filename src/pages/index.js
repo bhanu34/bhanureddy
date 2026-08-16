@@ -38,9 +38,9 @@ export default function Index({ data }) {
         <Hero type="index">
           <div className="hero-wrapper">
             <div>
-              <h1 className="flex-align-center gap">Hey, I'm Bhanu!</h1>
+              <h1 className="flex-align-center gap">Bhanu Pratap Reddy!</h1>
               <p className="hero-description hero-tagline">
-                Computational Physicist, web tinkerer, all-around nerd.
+                Computational Physicist 
               </p>
               <Heading title="EXPERIENCE" small />
               <ul className="hero-eras">
