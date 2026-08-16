@@ -1,86 +1,96 @@
 /* ==========================================================================
-   Full-Width Stacked Resume Layout
+   Single Column Resume Document Layout (Tania Rascia Format)
    ========================================================================== */
 
-.resume-container {
+.page-layout > div:not(.sidebar) {
+  display: block !important;
+  width: 100% !important;
+}
+
+.resume-wrapper {
   display: block !important;
   width: 100% !important;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0 3rem 0;
 }
 
 .resume-header {
   margin-bottom: 2.5rem;
+  display: block;
 }
 
 .resume-name {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 800;
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.35rem 0;
   line-height: 1.1;
+  color: var(--text-color, #1a202c);
 }
 
 .resume-tagline {
-  font-size: 1.25rem;
-  color: var(--color-text-muted, #718096);
+  font-size: 1.3rem;
+  color: var(--text-muted, #718096);
   margin: 0 0 1rem 0;
 }
 
 .resume-contact {
   font-size: 0.95rem;
+  color: var(--text-color, #2d3748);
 }
 
 .resume-contact .divider {
   margin: 0 0.5rem;
-  color: var(--color-border, #cbd5e0);
+  color: var(--border-color, #cbd5e0);
 }
 
 .resume-section {
   display: block !important;
   width: 100% !important;
   margin-bottom: 2.5rem;
+  clear: both;
 }
 
 .resume-section-title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-muted, #718096);
-  border-bottom: 1px solid var(--color-border, #e2e8f0);
-  padding-bottom: 0.4rem;
-  margin: 0 0 1.25rem 0;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: var(--text-muted, #718096) !important;
+  border-bottom: 1px solid var(--border-color, #e2e8f0) !important;
+  padding-bottom: 0.4rem !important;
+  margin: 0 0 1.25rem 0 !important;
 }
 
 .resume-item {
   margin-bottom: 1.75rem;
+  display: block;
 }
 
-.resume-item-top {
+.resume-item-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
-.resume-company {
+.resume-item-header h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
 }
 
-.resume-date {
+.resume-item-header .dates {
   font-size: 0.95rem;
-  color: var(--color-text-muted, #718096);
-  font-family: inherit;
+  color: var(--text-muted, #718096);
 }
 
-.resume-role {
+.resume-item .role {
   font-size: 1.05rem;
   font-weight: 700;
+  color: var(--text-color, #2d3748);
   margin-bottom: 0.5rem;
 }
 
@@ -91,101 +101,6 @@
 }
 
 .resume-bullets li {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
-/* ==========================================================================
-   Single Column Resume Document Layout
-   ========================================================================== */
-
-article.resume-document {
-  display: block !important;
-  width: 100% !important;
-  max-width: 780px !important;
-  margin: 0 auto !important;
-  padding: 2rem 0 !important;
-}
-
-.resume-header {
-  margin-bottom: 2.5rem;
-}
-
-.resume-name {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin: 0 0 0.4rem 0;
-  line-height: 1.1;
-}
-
-.resume-tagline {
-  font-size: 1.3rem;
-  color: var(--text-color, #4a5568);
-  margin: 0 0 1rem 0;
-}
-
-.resume-links {
-  font-size: 1rem;
-}
-
-.resume-links .divider {
-  margin: 0 0.5rem;
-  color: #cbd5e0;
-}
-
-.resume-block {
-  display: block !important;
-  width: 100% !important;
-  margin-bottom: 2.5rem !important;
-}
-
-.resume-heading {
-  font-size: 0.85rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-  color: #718096 !important;
-  border-bottom: 1px solid #e2e8f0 !important;
-  padding-bottom: 0.4rem !important;
-  margin: 0 0 1.25rem 0 !important;
-}
-
-.resume-entry {
-  margin-bottom: 1.75rem;
-}
-
-.resume-entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.2rem;
-}
-
-.resume-entry-header h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.resume-entry-header .date {
-  font-size: 0.95rem;
-  color: #718096;
-}
-
-.resume-entry .role {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.resume-block ul {
-  padding-left: 1.25rem;
-  margin: 0.5rem 0 0 0;
-  list-style-type: disc;
-}
-
-.resume-block ul li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
 }
