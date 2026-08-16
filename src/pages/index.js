@@ -19,6 +19,7 @@ export default function Index() {
       <SEO />
 
       <PageLayout>
+        {/* Top Hero Section: Name, Tagline & Mascot */}
         <Hero type="index">
           <div className="hero-wrapper">
             <div>
@@ -26,133 +27,6 @@ export default function Index() {
               <p className="hero-description hero-tagline">
                 Computational Physicist
               </p>
-
-              {/* Experience Section */}
-              <h2 className="section-title">EXPERIENCE</h2>
-
-              <div className="hero-experience">
-                {/* Stryker */}
-                <h3 className="company-heading">
-                  <a
-                    href="https://www.stryker.com/in/en/index.html"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Stryker
-                  </a>
-                </h3>
-
-                <div className="role-row">
-                  <span className="role-title">Staff CAE Engineer</span>
-                  <span className="role-date">August 2021 – Present</span>
-                </div>
-
-                <ul className="experience-bullets">
-                  <li>
-                    <strong>Instruments Division:</strong> Responsible for delivering modeling and simulation-driven insights for MedSurg (Medical &amp; Surgical) devices and equipment to reduce development costs, accelerate time-to-market, and drive innovation, with expertise in thermal management and reliability physics-based life prediction of medical electronic hardware early in the design process.
-                  </li>
-                  <li>
-                    <strong>Trauma &amp; Extremities Division:</strong> Collaborated with Orthopedics R&amp;D teams to develop advanced nonlinear micromotion models for quantifying implant loosening and performed material characterization of complex materials such as UHMWPE. Developed and validated FEA methodologies using Digital Image Correlation (DIC) for implant micromotion in accordance with ASTM F2028, and supported in-silico clinical studies for bone remodeling prediction using statistical population data. Contributed to simulation-driven development and performance assessment of complex humeral reconstruction implants, robotic shoulder surgical platforms, patient-specific implants, and trauma fixation systems including nails and plates, enabling robust design decisions, improved product performance, and enhanced clinical outcomes.
-                  </li>
-                </ul>
-
-                {/* CADFEM */}
-                <h3 className="company-heading" style={{ marginTop: '1.75rem' }}>
-                  <a
-                    href="https://www.cadfem.net/en/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    CADFEM
-                  </a>
-                </h3>
-
-                <div className="role-row">
-                  <span className="role-title">Sr. Simulation Engineer</span>
-                  <span className="role-date">September 2017 – August 2021</span>
-                </div>
-
-                <ul className="experience-bullets">
-                  <li>
-                    <strong>Consulting:</strong> Provided CAE/FEA support for product development by translating client requirements into simulation models, validating designs through FEA and experimental correlation, and recommending design improvements. Collaborated with cross-functional and international teams, conducted engineering analysis and background research, addressed technical knowledge gaps, and applied relevant industry standards and emerging simulation methodologies to deliver effective engineering solutions.
-                  </li>
-                </ul>
-              </div>
-
-              {/* Education Section */}
-              <h2 id="education" className="section-title" style={{ marginTop: '2.5rem' }}>
-                EDUCATION
-              </h2>
-
-              <div className="hero-experience">
-                {/* BITS Pilani */}
-                <h3 className="company-heading">
-                  <a
-                    href="https://bits-pilani-wilp.ac.in/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    BITS Pilani, WILP
-                  </a>
-                </h3>
-
-                <div className="role-row">
-                  <span className="role-title">
-                    M.Tech in Mechanical Engineering
-                  </span>
-                  <span className="role-date">2019 – 2021</span>
-                </div>
-
-                {/* JNTU Hyderabad */}
-                <h3 className="company-heading" style={{ marginTop: '1.75rem' }}>
-                  <a
-                    href="https://jntuh.ac.in/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    JNTU, Hyderabad
-                  </a>
-                </h3>
-
-                <div className="role-row">
-                  <span className="role-title">
-                    B.Tech in Civil Engineering
-                  </span>
-                  <span className="role-date">2013 – 2017</span>
-                </div>
-              </div>
-
-              {/* Skills Section */}
-              <h2 id="skills" className="section-title" style={{ marginTop: '2.5rem' }}>
-                SKILLS
-              </h2>
-
-              <ul className="experience-bullets">
-                <li>
-                  <strong>Thermal Management:</strong> Battery Thermal Management, Electronics Thermal Management, Thermal Digital Twins, Thermal Control Strategies, Thermal Optimization.
-                </li>
-                <li>
-                  <strong>Cooling Technologies:</strong> Liquid Cooling, Single- &amp; Two-Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
-                </li>
-                <li>
-                  <strong>Electronics &amp; Data Center Cooling:</strong> High-Power Electronics Cooling, Data Center Thermal Management, Server &amp; Rack-Level Cooling, Airflow Management, Thermal Hotspot Mitigation, Thermal Architecture.
-                </li>
-                <li>
-                  <strong>CFD &amp; Thermal Analysis:</strong> Conjugate Heat Transfer (CHT), Steady-State &amp; Transient Thermal Analysis, Flow Distribution, Pressure Drop, Thermal Resistance Networks, Radiation in Electronics, Airflow Optimization, Baffle &amp; Flow-Guide Design.
-                </li>
-                <li>
-                  <strong>Electronics Reliability:</strong> Reliability Physics, Physics-of-Failure (PoF), Electronics Life Prediction, Thermal Reliability, Temperature-Dependent Failure Mechanisms, Accelerated Life Testing, Reliability Modeling, Failure Analysis &amp; Root Cause Analysis.
-                </li>
-                <li>
-                  <strong>Thermal Validation:</strong> Temperature Measurement &amp; Validation, Simulation–Test Correlation, Thermal Characterization, Thermal Test Planning &amp; Reporting, Thermal Cycling, Reliability Validation.
-                </li>
-                <li>
-                  <strong>System-Level Engineering:</strong> HVAC, Thermal Control Algorithms, Device &amp; System-Level Thermal Optimization, Thermal Performance Modeling.
-                </li>
-                <li>
-                  <strong>Design Optimization &amp; Automation:</strong> Design of Experiments (DoE), Statistical Analysis, Parametric &amp; Sensitivity Studies, Optimization, Python-Based DoE &amp; Optimization, Automated Thermal Post-Processing, Steady-State Temperature Tracking.
-                </li>
-              </ul>
             </div>
 
             <div className="hero-image-container">
@@ -162,7 +36,6 @@ export default function Index() {
                 alt="Thermal Owl Mascot"
                 width="220"
                 height="220"
-                style={{ transform: 'translateY(10px)' }}
               />
               <aside className="hero-bubble">
                 Curious about my career journey?{' '}
@@ -172,8 +45,137 @@ export default function Index() {
           </div>
         </Hero>
 
+        {/* Experience Section */}
+        <section id="experience" className="section-index">
+          <h2 className="section-title">EXPERIENCE</h2>
+
+          <div className="hero-experience">
+            {/* Stryker */}
+            <h3 className="company-heading">
+              <a
+                href="https://www.stryker.com/in/en/index.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Stryker
+              </a>
+            </h3>
+
+            <div className="role-row">
+              <span className="role-title">Staff CAE Engineer</span>
+              <span className="role-date">August 2021 – Present</span>
+            </div>
+
+            <ul className="experience-bullets">
+              <li>
+                <strong>Instruments Division:</strong> Responsible for delivering modeling and simulation-driven insights for MedSurg (Medical &amp; Surgical) devices and equipment to reduce development costs, accelerate time-to-market, and drive innovation, with expertise in thermal management and reliability physics-based life prediction of medical electronic hardware early in the design process.
+              </li>
+              <li>
+                <strong>Trauma &amp; Extremities Division:</strong> Collaborated with Orthopedics R&amp;D teams to develop advanced nonlinear micromotion models for quantifying implant loosening and performed material characterization of complex materials such as UHMWPE. Developed and validated FEA methodologies using Digital Image Correlation (DIC) for implant micromotion in accordance with ASTM F2028, and supported in-silico clinical studies for bone remodeling prediction using statistical population data. Contributed to simulation-driven development and performance assessment of complex humeral reconstruction implants, robotic shoulder surgical platforms, patient-specific implants, and trauma fixation systems including nails and plates, enabling robust design decisions, improved product performance, and enhanced clinical outcomes.
+              </li>
+            </ul>
+
+            {/* CADFEM */}
+            <h3 className="company-heading" style={{ marginTop: '1.75rem' }}>
+              <a
+                href="https://www.cadfem.net/en/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CADFEM
+              </a>
+            </h3>
+
+            <div className="role-row">
+              <span className="role-title">Sr. Simulation Engineer</span>
+              <span className="role-date">September 2017 – August 2021</span>
+            </div>
+
+            <ul className="experience-bullets">
+              <li>
+                <strong>Consulting:</strong> Provided CAE/FEA support for product development by translating client requirements into simulation models, validating designs through FEA and experimental correlation, and recommending design improvements. Collaborated with cross-functional and international teams, conducted engineering analysis and background research, addressed technical knowledge gaps, and applied relevant industry standards and emerging simulation methodologies to deliver effective engineering solutions.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="section-index">
+          <h2 className="section-title">EDUCATION</h2>
+
+          <div className="hero-experience">
+            {/* BITS Pilani */}
+            <h3 className="company-heading">
+              <a
+                href="https://bits-pilani-wilp.ac.in/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                BITS Pilani, WILP
+              </a>
+            </h3>
+
+            <div className="role-row">
+              <span className="role-title">
+                M.Tech in Mechanical Engineering
+              </span>
+              <span className="role-date">2019 – 2021</span>
+            </div>
+
+            {/* JNTU Hyderabad */}
+            <h3 className="company-heading" style={{ marginTop: '1.75rem' }}>
+              <a
+                href="https://jntuh.ac.in/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                JNTU, Hyderabad
+              </a>
+            </h3>
+
+            <div className="role-row">
+              <span className="role-title">
+                B.Tech in Civil Engineering
+              </span>
+              <span className="role-date">2013 – 2017</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="section-index">
+          <h2 className="section-title">SKILLS</h2>
+
+          <ul className="experience-bullets">
+            <li>
+              <strong>Thermal Management:</strong> Battery Thermal Management, Electronics Thermal Management, Thermal Digital Twins, Thermal Control Strategies, Thermal Optimization.
+            </li>
+            <li>
+              <strong>Cooling Technologies:</strong> Liquid Cooling, Single- &amp; Two-Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
+            </li>
+            <li>
+              <strong>Electronics &amp; Data Center Cooling:</strong> High-Power Electronics Cooling, Data Center Thermal Management, Server &amp; Rack-Level Cooling, Airflow Management, Thermal Hotspot Mitigation, Thermal Architecture.
+            </li>
+            <li>
+              <strong>CFD &amp; Thermal Analysis:</strong> Conjugate Heat Transfer (CHT), Steady-State &amp; Transient Thermal Analysis, Flow Distribution, Pressure Drop, Thermal Resistance Networks, Radiation in Electronics, Airflow Optimization, Baffle &amp; Flow-Guide Design.
+            </li>
+            <li>
+              <strong>Electronics Reliability:</strong> Reliability Physics, Physics-of-Failure (PoF), Electronics Life Prediction, Thermal Reliability, Temperature-Dependent Failure Mechanisms, Accelerated Life Testing, Reliability Modeling, Failure Analysis &amp; Root Cause Analysis.
+            </li>
+            <li>
+              <strong>Thermal Validation:</strong> Temperature Measurement &amp; Validation, Simulation–Test Correlation, Thermal Characterization, Thermal Test Planning &amp; Reporting, Thermal Cycling, Reliability Validation.
+            </li>
+            <li>
+              <strong>System-Level Engineering:</strong> HVAC, Thermal Control Algorithms, Device &amp; System-Level Thermal Optimization, Thermal Performance Modeling.
+            </li>
+            <li>
+              <strong>Design Optimization &amp; Automation:</strong> Design of Experiments (DoE), Statistical Analysis, Parametric &amp; Sensitivity Studies, Optimization, Python-Based DoE &amp; Optimization, Automated Thermal Post-Processing, Steady-State Temperature Tracking.
+            </li>
+          </ul>
+        </section>
+
         {/* Projects Section */}
-        <section id="projects">
+        <section id="projects" className="section-index">
           <Heading
             title="Projects"
             description="Projects and open-source software I've worked on."
