@@ -40,37 +40,31 @@ export default function Index({ data }) {
             <div>
               <h1 className="flex-align-center gap">Bhanu Pratap Reddy</h1>
               <p className="hero-description hero-tagline">
-                Computational Physicist 
+                Computational Physicist
               </p>
-                <h2 className="section-title">Experience</h2>
-                <ul className="hero-eras">
-                <li>
-                  <span className="era-dates">1995&ndash;2009</span>
-                  <span>
-                    Army brat, APS kid, sports obsessive, country hopper, culture nerd.
-                  </span>
-                </li>
-                <li>
-                  <span className="era-dates">2009&ndash;2017</span>
-                  <span>
-                    South India, new surroundings, a growing love for mathematics, and an obsession with engineering. Eventually earned a B.Tech.
-                  </span>
-                </li>
-                <li>
-                  <span className="era-dates">2017&ndash;2021</span>
-                  <span>
-                    Started as a Simulation Engineer, worked across different companies and projects, and found my niche in modeling, simulation, and solving tricky engineering problems.
-                  </span>
-                </li>
-                <li>
-                  <span className="era-dates">2021&ndash;now</span>
-                  <span>
-                    Joined Stryker and moved into medical device R&D, applying simulation and engineering to problems where the work ultimately helps improve patient care.
-                  </span>
-                </li>
-              </ul>
-              <p className="hero-description">
-              </p>
+              <h2 className="section-title">EXPERIENCE</h2>
+
+              <div className="hero-experience">
+                <h3 className="company-heading">
+                  <a href="https://balto.ai" target="_blank" rel="noreferrer">
+                    Balto AI
+                  </a>
+                </h3>
+
+                <div className="role-row">
+                  <span className="role-title">Principal Software Engineer</span>
+                  <span className="role-date">April 2021 &ndash; Present</span>
+                </div>
+
+                <ul className="experience-bullets">
+                  <li>
+                    <strong>Feature ownership:</strong> Own Balto's entire front end surface across the two core products: the agent-facing real-time guidance experience in the Electron desktop app, and the manager-facing cloud application where teams search, review, and coach on calls. Deliver major features end-to-end from API contracts to release, including the call exploration suite, coaching and performance-analytics, real-time notification systems, and AI-powered authoring workflows backed by LLM endpoints.
+                  </li>
+                  <li>
+                    <strong>Design system:</strong> Created the front end design system and component library and drove its adoption across every product surface, with consolidated theming, cross-app visual parity, and white-label branding support.
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div className="hero-image-container">
