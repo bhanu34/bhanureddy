@@ -21,9 +21,9 @@ export const Sidebar = ({
   setCurrentColor,
 }) => {
   const links = [
-    { url: '/blog', label: 'Blog', image: blog },
-    { url: '/projects', label: 'Projects', image: projects },
-    { url: '/me', label: 'About Me', image: floppy },
+    { url: '/#education', label: 'Education', iconText: '🎓' },
+    { url: '/#skills', label: 'Skills', iconText: '⚡' },
+    { url: '/#projects', label: 'Projects', image: projects }
   ]
   const socialLinks = [
     {
