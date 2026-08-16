@@ -10,7 +10,7 @@ import projects from '../assets/nav-projects.png'
 import { Moon } from '../assets/Moon'
 import { Sun } from '../assets/Sun'
 import { Mail } from '../assets/Mail'
-import { Bluesky } from '../assets/Bluesky'
+import { LinkedIn } from '../assets/LinkedIn'
 import { Rss } from '../assets/Rss'
 import { GitHub } from '../assets/GitHub'
 
@@ -32,7 +32,7 @@ export const Sidebar = ({
       Icon: Mail,
     },
     { url: 'https://github.com/bhanu34', label: 'GitHub', Icon: GitHub },
-    { url: 'https://go.bsky.app/SmEWb8G', label: 'LinkedIn', Icon: Bluesky },
+    { url: 'https://www.linkedin.com/in/bhanu34/', label: 'LinkedIn', Icon: LinkedIn },
     { url: '/rss.xml', label: 'RSS feed', Icon: Rss },
   ]
 
