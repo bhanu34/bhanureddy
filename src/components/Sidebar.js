@@ -11,6 +11,7 @@ import { Mail } from '../assets/Mail'
 import { LinkedIn } from '../assets/LinkedIn'
 import { Rss } from '../assets/Rss'
 import { GitHub } from '../assets/GitHub'
+import { FetchCFD } from '../assets/FetchCFD'
 
 export const Sidebar = ({
   theme,
@@ -32,7 +33,7 @@ export const Sidebar = ({
     },
     { url: 'https://github.com/bhanu34', label: 'GitHub', Icon: GitHub },
     { url: 'https://www.linkedin.com/in/bhanu34/', label: 'LinkedIn', Icon: LinkedIn },
-    { url: '/rss.xml', label: 'RSS feed', Icon: Rss },
+    { url: 'https://fetchcfd.com/', label: 'FetchCFD', Icon: FetchCFD },
   ]
 
   const handleScroll = (e, id) => {
