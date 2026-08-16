@@ -4,7 +4,7 @@ import gatsby from '../assets/gatsby.png'
 import github from '../assets/nav-github.png'
 import { Netlify } from '../assets/Netlify'
 import { Mail } from '../assets/Mail'
-import { Rss } from '../assets/Rss'
+import { FetchCFD } from '../assets/FetchCFD'
 import { LinkedIn } from '../assets/LinkedIn'
 import { GitHub } from '../assets/GitHub'
 
@@ -12,7 +12,7 @@ const links = [
   { url: 'mailto:bhanu93@live.com', label: 'Contact', Icon: Mail },
   { url: 'https://www.linkedin.com/in/bhanu34/', label: 'LinkedIn', Icon: LinkedIn },
   { url: 'https://github.com/bhanu34', label: 'GitHub', Icon: GitHub },
-  { url: '/rss.xml', label: 'RSS feed', Icon: Rss },
+  { url: 'https://fetchcfd.com/', label: 'FetchCFD', Icon: FetchCFD },
 ]
 
 const madeWithLinks = [
