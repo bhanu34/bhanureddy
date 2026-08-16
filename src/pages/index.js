@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+  import React, { useMemo } from 'react'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
@@ -59,16 +59,36 @@ export default function Index({ data }) {
                 <ul className="experience-bullets">
                   <li>
                     <strong>Instruments Division:</strong> Responsible for delivering modeling and simulation-driven insights for MedSurg (Medical & Surgical) devices and equipment to reduce development costs, accelerate time-to-market, and drive innovation, with expertise in thermal management and reliability physics-based life prediction of medical electronic hardware early in the design process.
-.
                   </li>
                   <li>
-                    <strong>Trauma &amp; Extremities:</strong> Collaborated with Orthopedics R&D teams to develop advanced nonlinear micromotion models for quantifying implant loosening and performed material characterization of complex materials such as UHMWPE. Developed and validated FEA methodologies using Digital Image Correlation (DIC) for implant micromotion in accordance with ASTM F2028, and supported in-silico clinical studies for bone remodeling prediction using statistical population data. Contributed to simulation-driven development and performance assessment of complex humeral reconstruction implants, robotic shoulder surgical platforms, patient-specific implants, and trauma fixation systems including nails and plates, enabling robust design decisions, improved product performance, and enhanced clinical outcomes.
-.
+                    <strong>Trauma &amp; Extremities Division:</strong> Collaborated with Orthopedics R&D teams to develop advanced nonlinear micromotion models for quantifying implant loosening and performed material characterization of complex materials such as UHMWPE. Developed and validated FEA methodologies using Digital Image Correlation (DIC) for implant micromotion in accordance with ASTM F2028, and supported in-silico clinical studies for bone remodeling prediction using statistical population data. Contributed to simulation-driven development and performance assessment of complex humeral reconstruction implants, robotic shoulder surgical platforms, patient-specific implants, and trauma fixation systems including nails and plates, enabling robust design decisions, improved product performance, and enhanced clinical outcomes.
                   </li>
                 </ul>
               </div>
             </div>
+                {/* CADFEM */}
+                <h3 className="company-heading" style={{ marginTop: '1.75rem' }}>
+                  <a
+                    href="https://www.cadfem.net/en/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    CADFEM
+                  </a>
+                </h3>
 
+                <div className="role-row">
+                  <span className="role-title">Sr. Simulation Engineer</span>
+                  <span className="role-date">September 2017 &ndash; August 2021</span>
+                </div>
+
+                <ul className="experience-bullets">
+                  <li>
+                    <strong>Consulting:</strong> Provided CAE/FEA support for product development by translating client requirements into simulation models, validating designs through FEA and experimental correlation, and recommending design improvements. Collaborated with cross-functional and international teams, conducted engineering analysis and background research, addressed technical knowledge gaps, and applied relevant industry standards and emerging simulation methodologies to deliver effective engineering solutions.
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div className="hero-image-container">
               <img
                 src={mascot}
