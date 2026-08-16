@@ -42,7 +42,7 @@ export default function Index({ data }) {
               <p className="hero-description hero-tagline">
                 Computational Physicist, web tinkerer, all-around nerd.
               </p>
-              <Heading title="A brief timeline" small />
+              <Heading title="EXPERIENCE" small />
               <ul className="hero-eras">
                 <li>
                   <span className="era-dates">1995&ndash;2009</span>
@@ -70,7 +70,6 @@ export default function Index({ data }) {
                 </li>
               </ul>
               <p className="hero-description">
-                <strong>Also</strong>: Army brat, sports kid, country hopper, simulation nerd, web tinkerer.
               </p>
             </div>
 
