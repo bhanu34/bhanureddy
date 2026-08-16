@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { ColorDropdown } from './ColorDropdown'
+import mascot from '../assets/mascot.svg'
 import floppyLogo from '../assets/nav-floppy.png'
 import floppy from '../assets/floppylogo.png'
 import blog from '../assets/nav-blog.png'
 import projects from '../assets/nav-projects.png'
-import { useSidebarImages } from '../utils/hooks/useSidebarImages'
 import { Moon } from '../assets/Moon'
 import { Sun } from '../assets/Sun'
 import { Mail } from '../assets/Mail'
@@ -20,7 +20,6 @@ export const Sidebar = ({
   currentColor,
   setCurrentColor,
 }) => {
-  const { apple, newMoon } = useSidebarImages()
   const links = [
     { url: '/blog', label: 'Blog', image: blog },
     { url: '/projects', label: 'Projects', image: projects },
@@ -122,52 +121,19 @@ export const Sidebar = ({
         </nav>
       </section>
 
-      <section className="sidebar-card">
-        <h2 className="flex-align-center gap">
-          {newMoon?.publicURL && (
-            <img src={newMoon.publicURL} alt="" width="20" height="20" />
-          )}
-          New Moon Theme
-        </h2>
-        <div className="sidebar-content">
-          <p>
-            I use and maintain{' '}
-            <a
-              href="https://taniarascia.github.io/new-moon/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              New Moon
-            </a>
-            , a dark theme for{' '}
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=taniarascia.new-moon-vscode"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visual Studio Code
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-
-      <section className="sidebar-card">
-        <h2 className="flex-align-center gap">
-          {apple?.publicURL && (
-            <img src={apple.publicURL} alt="" width="20" height="20" />
-          )}
-          Setting Up a Mac?
-        </h2>
-        <div className="sidebar-content">
-          <p>
-            Read my guide to{' '}
-            <Link to="/setting-up-a-brand-new-mac-for-development">
-              setting up a new Mac
-            </Link>{' '}
-            for dev.
-          </p>
-        </div>
+      {/* Mascot Card Section */}
+      <section className="sidebar-mascot-section">
+        <img
+          src={mascot}
+          className="sidebar-mascot-image"
+          alt="Thermal Owl Mascot"
+          width="160"
+          height="160"
+        />
+        <aside className="hero-bubble">
+          Curious about my career journey?{' '}
+          <Link to="/resume">Explore my experience &rarr;</Link>
+        </aside>
       </section>
     </aside>
   )
