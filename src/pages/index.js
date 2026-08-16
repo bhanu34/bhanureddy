@@ -137,6 +137,38 @@ export default function Index({ data }) {
                   <span className="role-date">2013 – 2017</span>
                 </div>
               </div>
+
+              {/* Skills Section */}
+              <h2 className="section-title" style={{ marginTop: '2.5rem' }}>
+                SKILLS
+              </h2>
+
+              <ul className="experience-bullets">
+                <li>
+                  <strong>Thermal Management:</strong> Battery Thermal Management, Electronics Thermal Management, Thermal Digital Twins, Thermal Control Strategies, Thermal Optimization.
+                </li>
+                <li>
+                  <strong>Cooling Technologies:</strong> Liquid Cooling, Single- &amp; Two-Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
+                </li>
+                <li>
+                  <strong>Electronics &amp; Data Center Cooling:</strong> High-Power Electronics Cooling, Data Center Thermal Management, Server &amp; Rack-Level Cooling, Airflow Management, Thermal Hotspot Mitigation, Thermal Architecture.
+                </li>
+                <li>
+                  <strong>CFD &amp; Thermal Analysis:</strong> Conjugate Heat Transfer (CHT), Steady-State &amp; Transient Thermal Analysis, Flow Distribution, Pressure Drop, Thermal Resistance Networks, Radiation in Electronics, Airflow Optimization, Baffle &amp; Flow-Guide Design.
+                </li>
+                <li>
+                  <strong>Electronics Reliability:</strong> Reliability Physics, Physics-of-Failure (PoF), Electronics Life Prediction, Thermal Reliability, Temperature-Dependent Failure Mechanisms, Accelerated Life Testing, Reliability Modeling, Failure Analysis &amp; Root Cause Analysis.
+                </li>
+                <li>
+                  <strong>Thermal Validation:</strong> Temperature Measurement &amp; Validation, Simulation–Test Correlation, Thermal Characterization, Thermal Test Planning &amp; Reporting, Thermal Cycling, Reliability Validation.
+                </li>
+                <li>
+                  <strong>System-Level Engineering:</strong> HVAC, Thermal Control Algorithms, Device &amp; System-Level Thermal Optimization, Thermal Performance Modeling.
+                </li>
+                <li>
+                  <strong>Design Optimization &amp; Automation:</strong> Design of Experiments (DoE), Statistical Analysis, Parametric &amp; Sensitivity Studies, Optimization, Python-Based DoE &amp; Optimization, Automated Thermal Post-Processing, Steady-State Temperature Tracking.
+                </li>
+              </ul>
             </div>
 
             <div className="hero-image-container">
