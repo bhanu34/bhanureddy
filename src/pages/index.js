@@ -80,7 +80,7 @@ export default function Index() {
               </div>
 
               {/* Education Section */}
-              <h2 className="section-title" style={{ marginTop: '2.5rem' }}>
+              <h2 id="education" className="section-title" style={{ marginTop: '2.5rem' }}>
                 EDUCATION
               </h2>
 
@@ -123,7 +123,7 @@ export default function Index() {
               </div>
 
               {/* Skills Section */}
-              <h2 className="section-title" style={{ marginTop: '2.5rem' }}>
+              <h2 id="skills" className="section-title" style={{ marginTop: '2.5rem' }}>
                 SKILLS
               </h2>
 
@@ -173,7 +173,7 @@ export default function Index() {
         </Hero>
 
         {/* Projects Section */}
-        <section>
+        <section id="projects">>
           <Heading
             title="Projects"
             slug="/projects"
