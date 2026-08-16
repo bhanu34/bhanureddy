@@ -38,12 +38,12 @@ export default function Index({ data }) {
         <Hero type="index">
           <div className="hero-wrapper">
             <div>
-              <h1 className="flex-align-center gap">Bhanu Pratap Reddy!</h1>
+              <h1 className="flex-align-center gap">Bhanu Pratap Reddy</h1>
               <p className="hero-description hero-tagline">
                 Computational Physicist 
               </p>
-              <Heading title="EXPERIENCE" small />
-              <ul className="hero-eras">
+                <h2 className="section-title">Experience</h2>
+                <ul className="hero-eras">
                 <li>
                   <span className="era-dates">1995&ndash;2009</span>
                   <span>
