@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import { Layout } from '../components/Layout'
@@ -132,7 +132,7 @@ export default function Index() {
                   <strong>Thermal Management:</strong> Battery Thermal Management, Electronics Thermal Management, Thermal Digital Twins, Thermal Control Strategies, Thermal Optimization.
                 </li>
                 <li>
-                  <strong>Cooling Technologies:</strong> Liquid Cooling, Single &amp; Two Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
+                  <strong>Cooling Technologies:</strong> Liquid Cooling, Single- &amp; Two-Phase Flow, Air Cooling Systems, Heat Pipes, Vapor Chambers, Thermoelectric Coolers (TECs), Thermal Interface Materials (TIMs), Phase Change Materials (PCMs), Two-Phase Immersion Cooling.
                 </li>
                 <li>
                   <strong>Electronics &amp; Data Center Cooling:</strong> High-Power Electronics Cooling, Data Center Thermal Management, Server &amp; Rack-Level Cooling, Airflow Management, Thermal Hotspot Mitigation, Thermal Architecture.
@@ -173,11 +173,9 @@ export default function Index() {
         </Hero>
 
         {/* Projects Section */}
-        <section id="projects">>
+        <section id="projects">
           <Heading
             title="Projects"
-            slug="/projects"
-            buttonText="All Projects"
             description="Projects and open-source software I've worked on."
             icon={github}
           />
@@ -190,43 +188,11 @@ export default function Index() {
                   <div className="card" key={`highlight-${project.slug}`}>
                     <time>{project.date}</time>
                     <div className="card-title">
-                      <a
-                        href={project.url || `https://github.com/bhanu34/${project.slug}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <span style={{ fontWeight: 700, fontSize: '1.15rem' }}>
                         {project.name}
-                      </a>
+                      </span>
                     </div>
                     <p>{project.tagline}</p>
-                    <div className="card-links">
-                      {project.writeup && (
-                        <Link
-                          className="button secondary small"
-                          to={project.writeup}
-                        >
-                          Article
-                        </Link>
-                      )}
-                      {project.url && (
-                        <a
-                          className="button secondary small"
-                          href={project.url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Demo
-                        </a>
-                      )}
-                      <a
-                        className="button secondary small"
-                        href={`https://github.com/bhanu34/${project.slug}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Source
-                      </a>
-                    </div>
                   </div>
                 )
               })}
