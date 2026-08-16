@@ -27,12 +27,12 @@ export const Sidebar = ({
   ]
   const socialLinks = [
     {
-      url: 'https://taniarascia.substack.com',
-      label: 'Email signup',
+      url: 'mailto:bhanu93@live.com',
+      label: 'Email',
       Icon: Mail,
     },
-    { url: 'https://github.com/taniarascia', label: 'GitHub', Icon: GitHub },
-    { url: 'https://go.bsky.app/SmEWb8G', label: 'Bluesky', Icon: Bluesky },
+    { url: 'https://github.com/bhanu34', label: 'GitHub', Icon: GitHub },
+    { url: 'https://go.bsky.app/SmEWb8G', label: 'LinkedIn', Icon: Bluesky },
     { url: '/rss.xml', label: 'RSS feed', Icon: Rss },
   ]
 
@@ -51,7 +51,7 @@ export const Sidebar = ({
                 width="16"
               />
             </span>
-            <span className="site-name">tania.dev</span>
+            <span className="site-name">bhanu.dev</span>
           </Link>
           <div className="flex-align-center">
             <ColorDropdown
@@ -79,8 +79,8 @@ export const Sidebar = ({
         <h2>About Me</h2>
         <div className="sidebar-content">
           <p>
-            I'm <Link to="/me">Tania</Link>, software engineer and open-source
-            creator. This is my digital garden. 🌱
+            I am Bhanu, computational physicist and engineering simulation 
+            nerd. This is my digital garden. 🌱
           </p>
         </div>
       </section>
