@@ -2420,3 +2420,28 @@ a.footer-link {
   display: block;
   width: 100%;
 }
+/* ==========================================================================
+   Sidebar Mascot Styles
+   ========================================================================== */
+
+.sidebar-mascot-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.sidebar-mascot-image {
+  width: 140px;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-mascot-section .hero-bubble {
+  font-size: 0.85rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: var(--color-card-bg, #f5ecd7);
+  border: 1px solid var(--color-border, #e2d7be);
+}
