@@ -1,106 +1,355 @@
 /* ==========================================================================
-   Single Column Resume Document Layout (Tania Rascia Format)
+   Base Styles & Variables
    ========================================================================== */
 
-.page-layout > div:not(.sidebar) {
-  display: block !important;
-  width: 100% !important;
+:root {
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-mono: SFMono-Regular, Consolas, Menlo, Monaco, 'Liberation Mono',
+    'Courier New', monospace;
+
+  --color-primary: #52667a;
+  --color-primary-light: #7b8e9f;
+  --color-primary-dark: #374653;
+  --color-secondary: #008080;
+  --color-text: #212529;
+  --color-text-light: #6c757d;
+  --color-bg: #fdfdfc;
+  --color-card-bg: #ffffff;
+  --color-border: #e9ecef;
+  --color-code-bg: #f8f9fa;
+  --color-code: #d63384;
 }
 
-.resume-wrapper {
-  display: block !important;
-  width: 100% !important;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1.5rem 0 3rem 0;
+body.dark {
+  --color-primary: #8ab4f8;
+  --color-primary-light: #aecbfa;
+  --color-primary-dark: #669df6;
+  --color-secondary: #80cbc4;
+  --color-text: #e8eaed;
+  --color-text-light: #9aa0a6;
+  --color-bg: #181a1b;
+  --color-card-bg: #202224;
+  --color-border: #2d3134;
+  --color-code-bg: #202224;
+  --color-code: #f48fb1;
 }
 
-.resume-header {
-  margin-bottom: 2.5rem;
-  display: block;
+* {
+  box-sizing: border-box;
 }
 
-.resume-name {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin: 0 0 0.35rem 0;
-  line-height: 1.1;
-  color: var(--text-color, #1a202c);
+html {
+  font-family: var(--font-system);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-text-size-adjust: 100%;
 }
 
-.resume-tagline {
-  font-size: 1.3rem;
-  color: var(--text-muted, #718096);
-  margin: 0 0 1rem 0;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.resume-contact {
+/* ==========================================================================
+   Typography & Elements
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.15rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-code-bg);
+  color: var(--color-text-light);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  background-color: var(--color-code-bg);
+  color: var(--color-code);
+  border-radius: 4px;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.main-container {
+  min-height: calc(100vh - 180px);
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.navbar {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text);
   font-size: 0.95rem;
-  color: var(--text-color, #2d3748);
+  font-weight: 500;
 }
 
-.resume-contact .divider {
-  margin: 0 0.5rem;
-  color: var(--border-color, #cbd5e0);
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
-.resume-section {
-  display: block !important;
-  width: 100% !important;
-  margin-bottom: 2.5rem;
-  clear: both;
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero {
+  padding: 2.5rem 0 1.5rem 0;
 }
 
-.resume-section-title {
-  font-size: 0.85rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-  color: var(--text-muted, #718096) !important;
-  border-bottom: 1px solid var(--border-color, #e2e8f0) !important;
-  padding-bottom: 0.4rem !important;
-  margin: 0 0 1.25rem 0 !important;
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
 }
 
-.resume-item {
-  margin-bottom: 1.75rem;
-  display: block;
+.hero-description {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  max-width: 700px;
+  line-height: 1.6;
 }
 
-.resume-item-header {
+/* ==========================================================================
+   Home Segments & Posts
+   ========================================================================== */
+
+.segment {
+  margin-top: 3rem;
+}
+
+.segment.first {
+  margin-top: 1.5rem;
+}
+
+.heading {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.resume-item-header h3 {
-  font-size: 1.25rem;
+.heading-title {
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0;
 }
 
-.resume-item-header .dates {
-  font-size: 0.95rem;
-  color: var(--text-muted, #718096);
+.heading-link {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.resume-item .role {
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+}
+
+.post-title {
   font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-list li {
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-card-bg);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.project-list li:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-light);
+}
+
+.project-title {
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text-color, #2d3748);
-  margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
-.resume-bullets {
-  padding-left: 1.25rem;
-  margin: 0.5rem 0 0 0;
-  list-style-type: disc;
+.project-description {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
 }
 
-.resume-bullets li {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .post-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
 }
