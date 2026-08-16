@@ -42,6 +42,8 @@ export default function Index({ data }) {
               <p className="hero-description hero-tagline">
                 Computational Physicist
               </p>
+
+              {/* Experience Section */}
               <h2 className="section-title">EXPERIENCE</h2>
 
               <div className="hero-experience">
@@ -91,6 +93,49 @@ export default function Index({ data }) {
                     <strong>Consulting:</strong> Provided CAE/FEA support for product development by translating client requirements into simulation models, validating designs through FEA and experimental correlation, and recommending design improvements. Collaborated with cross-functional and international teams, conducted engineering analysis and background research, addressed technical knowledge gaps, and applied relevant industry standards and emerging simulation methodologies to deliver effective engineering solutions.
                   </li>
                 </ul>
+              </div>
+
+              {/* Education Section */}
+              <h2 className="section-title" style={{ marginTop: '2.5rem' }}>
+                EDUCATION
+              </h2>
+
+              <div className="hero-experience">
+                {/* BITS Pilani */}
+                <h3 className="company-heading">
+                  <a
+                    href="https://bits-pilani-wilp.ac.in/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    BITS Pilani, WILP
+                  </a>
+                </h3>
+
+                <div className="role-row">
+                  <span className="role-title">
+                    M.Tech in Mechanical Engineering
+                  </span>
+                  <span className="role-date">2019 – 2021</span>
+                </div>
+
+                {/* JNTU Hyderabad */}
+                <h3 className="company-heading" style={{ marginTop: '1.75rem' }}>
+                  <a
+                    href="https://jntuh.ac.in/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    JNTU, Hyderabad
+                  </a>
+                </h3>
+
+                <div className="role-row">
+                  <span className="role-title">
+                    B.Tech in Civil Engineering
+                  </span>
+                  <span className="role-date">2013 – 2017</span>
+                </div>
               </div>
             </div>
 
