@@ -2408,3 +2408,15 @@ a.footer-link {
 .gatsby-resp-image-wrapper {
   margin: 2rem 0;
 }
+.section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light, #718096);
+  border-bottom: 1px solid var(--color-border, #e9ecef);
+  padding-bottom: 0.4rem;
+  margin: 1.75rem 0 1rem 0;
+  display: block;
+  width: 100%;
+}
