@@ -1,11 +1,20 @@
-# taniarascia.com
+# bhanu.dev
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/0a51d0e9-f611-4dd8-887f-fc1889e68540/deploy-status)](https://app.netlify.com/sites/tania/deploys)
+Personal digital garden and portfolio running on Gatsby, React, and Node.js.
 
-Tania's personal website running on Gatsby, React, and Node.js.
+## Overview
 
-**Note**: The source for this site was not created to be a template or theme, but for my own use. Feel free to take whatever inspiration from it that you want, but this code was not written with the intention of being cloned and deployed. As such, I do not provide support or guidance for doing that. I recommend using the [Gatsby Advanced Starter](https://github.com/vagr9k/gatsby-advanced-starter/) to set up a blog or an existing theme created for that purpose.
+A minimal personal portfolio and digital garden showcasing simulation engineering projects, computational physics workflows, and engineering experience.
 
-## License
+## Tech Stack
 
-This project is open source and available under the [MIT License](LICENSE).
+* **Framework**: [Gatsby](https://www.gatsbyjs.com/) (React)
+* **Styling**: Vanilla CSS (CSS Variables, Dark/Light theme toggle)
+* **Deployment**: [Netlify](https://www.netlify.com/) / [GitHub Pages](https://pages.github.com/)
+
+## Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/bhanu34/bhanu34.github.io.git](https://github.com/bhanu34/bhanu34.github.io.git)
+   cd bhanu34.github.io
